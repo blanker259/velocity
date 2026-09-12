@@ -60,9 +60,6 @@
     <ClCompile Include="project\core\hooks\impl\utility.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="project\core\hooks\impl\vac.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="project\utilities\logging\impl\console.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -70,15 +67,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="project\utilities\hooking\impl\manager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="project\utilities\security\impl\integrity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="project\utilities\security\impl\regions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="project\utilities\security\impl\prologues.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="project\core\systems\impl\materials.cpp">
@@ -357,9 +345,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="project\utilities\logging\logging.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="project\utilities\security\security.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="project\core\settings.hpp">

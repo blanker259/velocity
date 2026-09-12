@@ -2,7 +2,6 @@
 
 #include <utilities/logging/logging.hpp>
 #include <utilities/addresses/addresses.hpp>
-#include <utilities/security/security.hpp>
 #include <utilities/memory/memory.hpp>
 #include <utilities/threadpool/threadpool.hpp>
 #include <utilities/bootstrap/bootstrap.hpp>
@@ -42,10 +41,8 @@ namespace {
 	#define INIT_WARN( msg ) INIT_FAIL( msg )
 #endif
 
-	DWORD WINAPI init_thread( LPVOID param )
+	DWORD WINAPI init_thread( LPVOID )
 	{
-		const auto module_handle = static_cast<HMODULE>( param );
-
 #if !defined( DEV )
 		// bool protection_result = false; g_protection.attach( &protection_result );
 		// if ( !protection_result )
@@ -61,8 +58,6 @@ namespace {
 		settings::finalize_binds( );
 
 		bootstrap::on_dll_attach( );
-
-		security::regions::add_module( module_handle );
 
 		{
 			if ( !logging::console::initialize( ) )
@@ -85,11 +80,6 @@ namespace {
 		}
 
 		{
-			if ( !PROTECTION_CHECK( ) || !security::integrity::initialize( ) )
-			{
-				INIT_FAIL( "failed to initialize integrity checks." );
-			}
-
 			if ( !PROTECTION_CHECK( ) || !threadpool::initialize( ) )
 			{
 				INIT_FAIL( "failed to initialize thread pool." );
@@ -158,11 +148,6 @@ namespace {
 		}
 
 		{
-			if ( !hooks::vac::initialize( ) )
-			{
-				INIT_FAIL( "failed to initialize vac hooks." );
-			}
-
 			if ( !PROTECTION_CHECK( ) || !hooks::utility::initialize( ) )
 			{
 				INIT_FAIL( "failed to initialize utility hooks." );

@@ -6,9 +6,7 @@ namespace protection::addresses { struct address_t; }
 namespace patterns {
 
 	extern const ::protection::addresses::address_t& add_entity;
-	extern const ::protection::addresses::address_t& analyze_pe_module;
 	extern const ::protection::addresses::address_t& base_fire_guns_get_inaccuracy;
-	extern const ::protection::addresses::address_t& build_diagnostic_response;
 	extern const ::protection::addresses::address_t& cmd_interpreter;
 	extern const ::protection::addresses::address_t& create_move;
 	extern const ::protection::addresses::address_t& csgo_input;

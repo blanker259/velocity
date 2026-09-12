@@ -7,20 +7,10 @@ namespace patterns {
 		::protection::addresses::address_type::pattern,
 		"client.dll:90200000488D05*????????48890733D2+78~");
 
-	const ::protection::addresses::address_t& analyze_pe_module = ADDRESS_IMPL(
-		::protection::addresses::hash("client.dll:004C89BDA0000000>E8????????84C07445"),
-		::protection::addresses::address_type::pattern,
-		"client.dll:004C89BDA0000000>E8????????84C07445");
-
 	const ::protection::addresses::address_t& base_fire_guns_get_inaccuracy = ADDRESS_IMPL(
 		::protection::addresses::hash("client.dll:>E8????????84C00F84C6FEFFFF"),
 		::protection::addresses::address_type::pattern,
 		"client.dll:>E8????????84C00F84C6FEFFFF");
-
-	const ::protection::addresses::address_t& build_diagnostic_response = ADDRESS_IMPL(
-		::protection::addresses::hash("client.dll:8954241053565741544155415641574881ECE0090000488BD948898C24380100004533E44533C033D2488D8C24A0000000E8????????488D05????????"),
-		::protection::addresses::address_type::pattern,
-		"client.dll:8954241053565741544155415641574881ECE0090000488BD948898C24380100004533E44533C033D2488D8C24A0000000E8????????488D05????????");
 
 	const ::protection::addresses::address_t& cmd_interpreter = ADDRESS_IMPL(
 		::protection::addresses::hash("rendersystemdx11.dll:>E8????????4183BDC000000000"),

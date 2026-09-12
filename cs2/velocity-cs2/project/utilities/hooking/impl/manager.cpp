@@ -1,5 +1,4 @@
 #include <pch/pch.hpp>
-#include <utilities/security/security.hpp>
 #include <utilities/logging/logging.hpp>
 
 #include "../hooking.hpp"
@@ -20,8 +19,6 @@ namespace hooking::manager {
 			{
 				return false;
 			}
-
-			security::prologues::add( entry.address, entry.hook->get_original_bytes( ), entry.hook->get_original_length( ) );
 		}
 
 		return true;

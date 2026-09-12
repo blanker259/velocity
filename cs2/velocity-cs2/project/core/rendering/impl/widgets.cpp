@@ -7,7 +7,6 @@
 #include <core/features/features.hpp>
 
 #include "../rendering.hpp"
-#include <utilities/security/security.hpp>
 
 namespace rendering {
 
